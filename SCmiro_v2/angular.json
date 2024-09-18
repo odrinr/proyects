@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "SCmiro": {
+    "SCmiro_v2": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,21 +13,19 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/scmiro",
+            "outputPath": "dist/scmiro-v2",
             "index": "src/index.html",
             "main": "src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
+            "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -60,10 +58,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "SCmiro:build:production"
+              "browserTarget": "SCmiro_v2:build:production"
             },
             "development": {
-              "browserTarget": "SCmiro:build:development"
+              "browserTarget": "SCmiro_v2:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +69,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "SCmiro:build"
+            "browserTarget": "SCmiro_v2:build"
           }
         },
         "test": {

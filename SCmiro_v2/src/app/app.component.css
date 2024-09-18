@@ -1,0 +1,11 @@
+.carousel-item img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.carousel {
+
+  max-width: 60%;
+  margin: auto;
+}
